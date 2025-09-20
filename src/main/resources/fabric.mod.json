@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "home",
+	"version": "${version}",
+	"name": "Come Home",
+	"description": "A mod that teleports you home",
+	"authors": [
+		"DaWil__"
+	],
+	"contact": {
+		"homepage": "",
+		"sources": ""
+	},
+	"license": "",
+	"icon": "assets/home/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.levente.ComeHome"
+		],
+		"fabric-datagen": [
+			"net.levente.ComeHomeDataGenerator"
+		]
+	},
+	"mixins": [
+		"home.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.17.2",
+		"minecraft": "~1.21.8",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

@@ -2,10 +2,11 @@ package net.levente;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
-import net.levente.datagen.ModBlockTagProvider;
-import net.levente.datagen.ModLangProvider;
-import net.levente.datagen.ModModelProvider;
-import net.minecraft.client.data.ModelProvider;
+import net.levente.datagen.*;
+import net.levente.world.ModConfiguredFeatures;
+import net.levente.world.ModPlacedFeatures;
+import net.minecraft.registry.RegistryBuilder;
+import net.minecraft.registry.RegistryKeys;
 
 public class ComeHomeDataGenerator implements DataGeneratorEntrypoint {
 	@Override
@@ -15,6 +16,13 @@ public class ComeHomeDataGenerator implements DataGeneratorEntrypoint {
         pack.addProvider(ModLangProvider::new);
         pack.addProvider(ModModelProvider::new);
         pack.addProvider(ModBlockTagProvider::new);
-
+        pack.addProvider(ModLootTableProvider::new);
+        pack.addProvider(ModRegistryDataGenerator::new);
 	}
+
+    @Override
+    public void buildRegistry(RegistryBuilder registryBuilder) {
+        registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap);
+        registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, ModPlacedFeatures::bootstrap);
+    }
 }

@@ -2,8 +2,8 @@ package net.levente.item;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.levente.ComeHome;
+import net.levente.block.ModBlocks;
 import net.levente.item.custom.VoidCompass;
-import net.minecraft.entity.Entity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
@@ -33,7 +33,8 @@ public class ModItems {
     public static void registerModItems() {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS)
                 .register((group) -> {
-                    group.add(ModItems.VOID_COMPASS);
+                    group.add(VOID_COMPASS);
+                    group.add(ModBlocks.CONDENSED_VOID.asItem());
                 });
     }
 }

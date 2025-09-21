@@ -3,6 +3,7 @@ package net.levente;
 import net.fabricmc.api.ModInitializer;
 
 import net.levente.component.ModDataComponentTypes;
+import net.levente.event.ModEvents;
 import net.levente.item.ModItems;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
@@ -16,6 +17,7 @@ public class ComeHome implements ModInitializer {
 	public void onInitialize() {
         ModItems.registerModItems();
         ModDataComponentTypes.registerModDataCompTypes();
+        ModEvents.registerModEvents();
 
 		LOGGER.info("Hello Fabric world!");
 	}

@@ -34,6 +34,10 @@ public class ModItems {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS)
                 .register((group) -> {
                     group.add(VOID_COMPASS);
+                });
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL)
+                .register(group ->{
                     group.add(ModBlocks.CONDENSED_VOID.asItem());
                 });
     }

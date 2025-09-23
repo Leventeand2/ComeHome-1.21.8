@@ -17,5 +17,6 @@ public class ModLangProvider extends FabricLanguageProvider {
     public void generateTranslations(RegistryWrapper.WrapperLookup wrapperLookup, TranslationBuilder translationBuilder) {
         translationBuilder.add(ModItems.VOID_COMPASS, "Void Compass");
         translationBuilder.add(ModBlocks.CONDENSED_VOID, "Condensed Void");
+        translationBuilder.add(ModItems.PURIFIED_VOID, "Purified Void");
     }
 }

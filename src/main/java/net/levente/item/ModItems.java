@@ -18,7 +18,13 @@ public class ModItems {
     public static final Item VOID_COMPASS = register(
             "void_compass",
             VoidCompass::new,
-            new Item.Settings().maxCount(1)
+            new Item.Settings().maxCount(1).maxDamage(100)
+    );
+
+    public static final Item PURIFIED_VOID = register(
+            "purified_void",
+            Item::new,
+            new Item.Settings().maxCount(16)
     );
     private static Item register(String name, Function<Item.Settings, Item> itemFactory, Item.Settings settings) {
         RegistryKey<Item> itemKey = RegistryKey.of(RegistryKeys.ITEM, ComeHome.id(name));

@@ -1,0 +1,15 @@
+{
+  "fallback": "minecraft:empty",
+
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "house:traveller_house",
+        "processors": "home:traveller_house_chest_loot",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

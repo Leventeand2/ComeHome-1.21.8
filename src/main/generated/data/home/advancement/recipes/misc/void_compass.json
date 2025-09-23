@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_ender_eye": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:ender_eye"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_purified_void": {
+      "conditions": {
+        "items": [
+          {
+            "items": "home:purified_void"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "home:void_compass"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_purified_void",
+      "has_ender_eye"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "home:void_compass"
+    ]
+  }
+}

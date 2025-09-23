@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_condensed_void": {
+      "conditions": {
+        "items": [
+          {
+            "items": "home:condensed_void"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "home:purified_void_from_smelting_condensed_void"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_condensed_void"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "home:purified_void_from_smelting_condensed_void"
+    ]
+  }
+}

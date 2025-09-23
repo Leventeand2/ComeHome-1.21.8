@@ -2,6 +2,7 @@ package net.levente.item.custom;
 
 import net.levente.component.ModDataComponentTypes;
 import net.minecraft.component.DataComponentTypes;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -33,7 +34,7 @@ public class VoidCompass extends Item {
 
     @Override
     public ActionResult use(World world, PlayerEntity user, Hand hand) {
-        if (world.isClient() || hand != Hand.MAIN_HAND) {
+        if (world.isClient()) {
             return ActionResult.PASS;
         }
 
@@ -58,7 +59,6 @@ public class VoidCompass extends Item {
                 stack.set(ModDataComponentTypes.HOME_POS_WORLD, homeDim);
 
                 stack.set(DataComponentTypes.ENCHANTMENT_GLINT_OVERRIDE, true);
-                stack.set(DataComponentTypes.DAMAGE, 25);
 
                 return ActionResult.SUCCESS;
             } else {
@@ -70,7 +70,11 @@ public class VoidCompass extends Item {
                     if (server != null) {
                         ServerWorld targetWorld = server.getWorld(homeDim);
                         if (targetWorld != null) {
-                            user.teleport(targetWorld, (double) homePos.getX(), (double) homePos.getY() + 1, (double) homePos.getZ(), Collections.emptySet(), user.getYaw(), user.getPitch(), false);
+                            user.teleport(targetWorld, homePos.getX(), (double) homePos.getY() + 1, homePos.getZ(), Collections.emptySet(), user.getYaw(), user.getPitch(), false);
+                            stack.damage(1, user, user.getActiveHand().equals(Hand.MAIN_HAND)
+                                    ? EquipmentSlot.MAINHAND
+                                    : EquipmentSlot.OFFHAND);
+
                             return ActionResult.SUCCESS;
                         }
                     }

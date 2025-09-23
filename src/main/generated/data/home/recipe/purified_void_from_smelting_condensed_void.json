@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 300,
+  "experience": 12.0,
+  "group": "void_block_to_purified_void",
+  "ingredient": "home:condensed_void",
+  "result": {
+    "id": "home:purified_void"
+  }
+}

@@ -11,7 +11,7 @@
 		"homepage": "",
 		"sources": ""
 	},
-	"license": "",
+	"license": "Daniel-License-v1.0",
 	"icon": "assets/home/icon.png",
 	"environment": "*",
 	"entrypoints": {
@@ -29,9 +29,10 @@
 		"fabricloader": ">=0.17.2",
 		"minecraft": "~1.21.8",
 		"java": ">=21",
-		"fabric-api": "*"
+		"fabric-api": "*",
+        "modelfix": "1.21.5-1.12"
 	},
 	"suggests": {
-		"another-mod": "*"
+		"rei": "20.0.811+fabric"
 	}
 }

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": "minecraft:ender_eye",
+    "P": "home:purified_void"
+  },
+  "pattern": [
+    "PPP",
+    "PEP",
+    "PPP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "home:void_compass"
+  }
+}

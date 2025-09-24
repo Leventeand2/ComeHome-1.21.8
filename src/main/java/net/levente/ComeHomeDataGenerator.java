@@ -16,9 +16,10 @@ public class ComeHomeDataGenerator implements DataGeneratorEntrypoint {
         pack.addProvider(ModLangProvider::new);
         pack.addProvider(ModModelProvider::new);
         pack.addProvider(ModBlockTagProvider::new);
-        pack.addProvider(ModLootTableProvider::new);
+        pack.addProvider(ModBlockLootTableProvider::new);
         pack.addProvider(ModRegistryDataGenerator::new);
         pack.addProvider(ModRecipeProvider::new);
+        pack.addProvider(ModLootTableProvider::new);
 	}
 
     @Override

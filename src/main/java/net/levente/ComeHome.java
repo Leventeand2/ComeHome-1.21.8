@@ -1,13 +1,11 @@
 package net.levente;
 
-import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.ModInitializer;
 
 import net.levente.block.ModBlocks;
 import net.levente.component.ModDataComponentTypes;
 import net.levente.event.ModEvents;
 import net.levente.item.ModItems;
-import net.levente.util.ModLootTableModifier;
 import net.levente.world.gen.ModWorldGeneration;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
@@ -25,7 +23,6 @@ public class ComeHome implements ModInitializer {
         ModBlocks.registerModBlocks();
 
         ModWorldGeneration.generateModWorldGen();
-        ModLootTableModifier.modifyLootTables();
 
 		LOGGER.info("Hello Fabric world!");
 	}

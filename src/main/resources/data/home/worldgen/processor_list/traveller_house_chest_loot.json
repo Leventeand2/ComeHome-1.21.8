@@ -5,8 +5,9 @@
       "rules": [
         {
           "input_predicate": {
-            "predicate_type": "minecraft:block_match",
-            "block": "minecraft:chest"
+            "block": "minecraft:chest",
+            "probability": 1,
+            "predicate_type": "minecraft:random_block_match"
           },
           "location_predicate": {
             "predicate_type": "minecraft:always_true"
@@ -18,7 +19,7 @@
             }
           },
           "block_entity_data": {
-            "LootTable": "home:chests/traveller_house_chest_loot"
+            "LootTable": "home:"
           }
         }
       ]

@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.levente.datagen.*;
 import net.levente.world.ModConfiguredFeatures;
 import net.levente.world.ModPlacedFeatures;
+import net.minecraft.loot.context.LootContextTypes;
 import net.minecraft.registry.RegistryBuilder;
 import net.minecraft.registry.RegistryKeys;
 
@@ -19,7 +20,8 @@ public class ComeHomeDataGenerator implements DataGeneratorEntrypoint {
         pack.addProvider(ModBlockLootTableProvider::new);
         pack.addProvider(ModRegistryDataGenerator::new);
         pack.addProvider(ModRecipeProvider::new);
-        pack.addProvider(ModLootTableProvider::new);
+        pack.addProvider((output, registries) ->
+                new ModChestLootTableProvider(output, registries, LootContextTypes.CHEST));
 	}
 
     @Override

@@ -3,7 +3,7 @@
 	"id": "home",
 	"version": "${version}",
 	"name": "Come Home",
-	"description": "A mod that teleports you home",
+	"description": "A mod that teleports you home.",
 	"authors": [
 		"DaWil__"
 	],

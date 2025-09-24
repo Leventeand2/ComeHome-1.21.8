@@ -5,9 +5,8 @@
       "rules": [
         {
           "input_predicate": {
-            "block": "minecraft:chest",
-            "probability": 1,
-            "predicate_type": "minecraft:random_block_match"
+            "predicate_type": "minecraft:block_match",
+            "block": "minecraft:gold_block"
           },
           "location_predicate": {
             "predicate_type": "minecraft:always_true"
@@ -17,9 +16,21 @@
             "Properties": {
               "facing": "north"
             }
+          }
+        },
+        {
+          "input_predicate": {
+            "predicate_type": "minecraft:block_match",
+            "block": "minecraft:diamond_block"
           },
-          "block_entity_data": {
-            "LootTable": "home:"
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "output_state": {
+            "Name": "minecraft:chest",
+            "Properties": {
+              "facing": "north"
+            }
           }
         }
       ]

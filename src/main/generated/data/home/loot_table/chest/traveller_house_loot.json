@@ -44,6 +44,23 @@
             }
           ],
           "name": "home:void_compass"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "chance": 0.1,
+              "condition": "minecraft:random_chance"
+            }
+          ],
+          "functions": [
+            {
+              "add": false,
+              "count": 1.0,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "home:broken_void_compass"
         }
       ],
       "rolls": 1.0

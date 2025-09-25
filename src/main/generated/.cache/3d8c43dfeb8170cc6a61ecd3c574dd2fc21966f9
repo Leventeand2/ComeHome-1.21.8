@@ -1,5 +1,5 @@
 // 1.21.8	-999999999-01-01T00:00:00	Come Home/ModRecipeProvider
 37f3cc8c46074c188ef3c1e6c2ef9823cd99b974 data/home/advancement/recipes/misc/purified_void_from_smelting_condensed_void.json
-f0f0be59f20723036feb0e31c784b1a19fce1d11 data/home/advancement/recipes/misc/void_compass.json
+88fc27158eddb490e5e5c1c30e31d623c0116a71 data/home/advancement/recipes/tools/void_compass.json
 3a48927dd533f3ffc37df4569c96b786e623464c data/home/recipe/purified_void_from_smelting_condensed_void.json
-aef0ef0a06fd97f129bae96290d2d08baa4c7826 data/home/recipe/void_compass.json
+12a0e88d954b4336b0d2e1b9bf7a776d724daf1d data/home/recipe/void_compass.json

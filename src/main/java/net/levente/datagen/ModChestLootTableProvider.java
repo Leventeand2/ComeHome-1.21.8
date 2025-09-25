@@ -7,6 +7,7 @@ import net.minecraft.item.Items;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.LootTable;
 import net.minecraft.loot.condition.RandomChanceLootCondition;
+import net.minecraft.loot.entry.EmptyEntry;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.function.SetCountLootFunction;
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
@@ -42,7 +43,10 @@ public class ModChestLootTableProvider extends SimpleFabricLootTableProvider {
                         .rolls(ConstantLootNumberProvider.create(1))
                         .with(ItemEntry.builder(ModItems.VOID_COMPASS)
                                 .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1)))
-                                .conditionally(RandomChanceLootCondition.builder(0.05f))));
+                                .conditionally(RandomChanceLootCondition.builder(0.05f)))
+                        .with(ItemEntry.builder(ModItems.BROKEN_VOID_COMPASS)
+                                .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1)))
+                                .conditionally(RandomChanceLootCondition.builder(0.1f))));
 
         LootTable.Builder secretBuilder = LootTable.builder()
                 .pool(LootPool.builder()
@@ -55,7 +59,11 @@ public class ModChestLootTableProvider extends SimpleFabricLootTableProvider {
                         .rolls(ConstantLootNumberProvider.create(1))
                         .with(ItemEntry.builder(ModItems.VOID_COMPASS)
                                 .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1)))
-                                .conditionally(RandomChanceLootCondition.builder(0.015f))));
+                                .conditionally(RandomChanceLootCondition.builder(0.015f)))
+                        .with(ItemEntry.builder(ModItems.BROKEN_VOID_COMPASS)
+                                .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1)))
+                                .conditionally(RandomChanceLootCondition.builder(0.112f)))
+                        .with(EmptyEntry.builder().weight(3)));
 
         lootTableBiConsumer.accept(nonSecret, nonSecretBuilder);
         lootTableBiConsumer.accept(secret, secretBuilder);

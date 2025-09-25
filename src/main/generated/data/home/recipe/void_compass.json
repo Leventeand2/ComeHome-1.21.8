@@ -1,14 +1,10 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "misc",
-  "key": {
-    "E": "minecraft:ender_eye",
-    "P": "home:purified_void"
-  },
-  "pattern": [
-    "PPP",
-    "PEP",
-    "PPP"
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "minecraft:recovery_compass",
+    "home:broken_void_compass",
+    "minecraft:nether_star"
   ],
   "result": {
     "count": 1,

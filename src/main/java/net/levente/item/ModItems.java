@@ -26,6 +26,12 @@ public class ModItems {
             Item::new,
             new Item.Settings().maxCount(16)
     );
+
+    public static final Item BROKEN_VOID_COMPASS = register(
+            "broken_void_compass",
+            Item::new,
+            new Item.Settings().maxCount(1)
+    );
     private static Item register(String name, Function<Item.Settings, Item> itemFactory, Item.Settings settings) {
         RegistryKey<Item> itemKey = RegistryKey.of(RegistryKeys.ITEM, ComeHome.id(name));
 
@@ -40,11 +46,17 @@ public class ModItems {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS)
                 .register((group) -> {
                     group.add(VOID_COMPASS);
+                    group.add(BROKEN_VOID_COMPASS);
                 });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL)
                 .register(group ->{
                     group.add(ModBlocks.CONDENSED_VOID.asItem());
+                });
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS)
+                .register(group -> {
+                    group.add(PURIFIED_VOID);
                 });
     }
 }

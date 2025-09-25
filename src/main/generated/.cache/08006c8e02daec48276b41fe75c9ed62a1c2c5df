@@ -1,8 +1,10 @@
 // 1.21.8	-999999999-01-01T00:00:00	Come Home/Model Definitions
 a13e358b51a7e74285c6f2a9c41e703067401cb8 assets/home/blockstates/condensed_void.json
+8e8ac95176fc77273cfdbdd72fd692a9f1bb9c3f assets/home/items/broken_void_compass.json
 39006efd0fa222061bccc1e78834a2f79bde5d8d assets/home/items/condensed_void.json
 a127304e50a7fded6113fe4f205219269d4c987c assets/home/items/purified_void.json
 c8b0b9353b5b11047d2d367d93d42f7985e0f5ea assets/home/items/void_compass.json
 8b5b24e1a757964ae04e4a1bba2ebe4913619cf7 assets/home/models/block/condensed_void.json
+63b39c279ec7f5a767d805ec2bcba35553a91ea9 assets/home/models/item/broken_void_compass.json
 3c4b1516047734066b576299c263c54f08f4c346 assets/home/models/item/purified_void.json
 377691f23ba7f1557246e0000542ca56c5ac16de assets/home/models/item/void_compass.json

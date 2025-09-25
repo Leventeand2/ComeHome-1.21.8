@@ -1,6 +1,7 @@
 package net.levente.item.custom;
 
 import net.levente.component.ModDataComponentTypes;
+import net.levente.item.ModItems;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
@@ -24,6 +25,7 @@ public class VoidCompass extends Item {
     public VoidCompass(Settings settings) {
         super(settings);
     }
+
 
 
     @Override
@@ -74,6 +76,10 @@ public class VoidCompass extends Item {
                             stack.damage(1, user, user.getActiveHand().equals(Hand.MAIN_HAND)
                                     ? EquipmentSlot.MAINHAND
                                     : EquipmentSlot.OFFHAND);
+                            if (stack.getDamage() >= stack.getMaxDamage()) {
+                                ItemStack newItem = new ItemStack(ModItems.BROKEN_VOID_COMPASS);
+                                user.setStackInHand(hand, newItem);
+                            }
 
                             return ActionResult.SUCCESS;
                         }

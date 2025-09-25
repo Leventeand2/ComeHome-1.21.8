@@ -1,21 +1,31 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_ender_eye": {
+    "has_broken_void_compass": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:ender_eye"
+            "items": "home:broken_void_compass"
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_purified_void": {
+    "has_compass": {
       "conditions": {
         "items": [
           {
-            "items": "home:purified_void"
+            "items": "minecraft:compass"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_nether_star": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:nether_star"
           }
         ]
       },
@@ -31,8 +41,9 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_purified_void",
-      "has_ender_eye"
+      "has_compass",
+      "has_broken_void_compass",
+      "has_nether_star"
     ]
   ],
   "rewards": {

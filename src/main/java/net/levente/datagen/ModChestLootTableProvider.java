@@ -35,7 +35,8 @@ public class ModChestLootTableProvider extends SimpleFabricLootTableProvider {
                 .pool(LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(7))
                         .with(ItemEntry.builder(Items.BREAD).weight(5))
-                        .with(ItemEntry.builder(Items.IRON_INGOT).weight(1))
+                        .with(ItemEntry.builder(Items.IRON_INGOT).weight(2))
+                        .with(ItemEntry.builder(ModItems.PURIFIED_VOID).weight(1))
                         .with(ItemEntry.builder(Items.DIAMOND).weight(1)))
                 .pool(LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
@@ -45,15 +46,16 @@ public class ModChestLootTableProvider extends SimpleFabricLootTableProvider {
 
         LootTable.Builder secretBuilder = LootTable.builder()
                 .pool(LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(8))
+                        .rolls(ConstantLootNumberProvider.create(9))
                         .with(ItemEntry.builder(Items.BREAD).weight(10))
                         .with(ItemEntry.builder(Items.IRON_INGOT).weight(3))
+                        .with(ItemEntry.builder(ModItems.PURIFIED_VOID).weight(3))
                         .with(ItemEntry.builder(Items.DIAMOND).weight(3)))
                 .pool(LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .with(ItemEntry.builder(ModItems.VOID_COMPASS)
                                 .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1)))
-                                .conditionally(RandomChanceLootCondition.builder(0.1f))));
+                                .conditionally(RandomChanceLootCondition.builder(0.015f))));
 
         lootTableBiConsumer.accept(nonSecret, nonSecretBuilder);
         lootTableBiConsumer.accept(secret, secretBuilder);
